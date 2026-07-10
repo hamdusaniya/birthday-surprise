@@ -1,11 +1,11 @@
-document.getElementById("cover").addEventListener("click",function(){
+document.getElementById("cover").onclick=function(){
 
-    document.body.style.opacity="0";
+document.body.style.opacity="0";
 
-    setTimeout(function(){
+setTimeout(function(){
 
-        window.location.href="gallery.html";
+window.location.href="gallery.html";
 
-    },800);
+},700);
 
-});
+};
