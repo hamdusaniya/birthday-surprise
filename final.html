@@ -39,7 +39,27 @@
 </section>
 
 <script src="final.js"></script>
+<canvas id="confetti"></canvas>
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+
+setTimeout(function(){
+
+confetti({
+
+particleCount:180,
+
+spread:120,
+
+origin:{y:.6}
+
+});
+
+},5500);
+
+</script>
 </body>
 
 </html>
