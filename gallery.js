@@ -1,38 +1,55 @@
-const photos = [
-    "photo1.jpg",
-    "photo2.jpg",
-    "photo3.jpg",
-    "photo4.jpg",
-    "photo5.jpg"
+const photos=[
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg"
 ];
 
-let current = 0;
+let current=0;
 
-const image = document.getElementById("photo");
-const button = document.getElementById("nextPhoto");
+const img=document.getElementById("photo");
 
-button.addEventListener("click", function () {
+document.getElementById("nextPhoto").onclick=function(){
 
-    image.style.opacity = "0";
-    image.style.transform = "rotateY(90deg)";
+img.style.opacity="0";
 
-    setTimeout(function () {
+setTimeout(function(){
 
-        current++;
+current++;
 
-        if (current < photos.length) {
+if(current<photos.length){
 
-            image.src = photos[current];
+img.src=photos[current];
 
-            image.style.transform = "rotateY(0deg)";
-            image.style.opacity = "1";
+img.style.opacity="1";
 
-        } else {
+}else{
 
-            window.location.href = "wish.html";
+window.location.href="wish.html";
 
-        }
+}
 
-    }, 1000);
+},500);
 
-});
+};
+
+const music=document.getElementById("music");
+
+document.getElementById("musicBtn").onclick=function(){
+
+if(music.paused){
+
+music.play();
+
+this.innerHTML="⏸ Pause Music";
+
+}else{
+
+music.pause();
+
+this.innerHTML="🎵 Play Music";
+
+}
+
+};
