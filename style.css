@@ -430,9 +430,8 @@ button:hover{
 
     position:fixed;
 
-    top:20px;
-
-    right:20px;
+    bottom:25px;
+right:20px;
 
     z-index:999;
 
@@ -472,20 +471,20 @@ button:hover{
 }
 .photo-text{
 
+    width:90%;
+
     color:#D4AF37;
 
     font-family:'Cormorant Garamond',serif;
 
-    font-size:30px;
-
-    font-style:italic;
+    font-size:22px;
 
     text-align:center;
 
-    margin-bottom:30px;
+    font-style:italic;
 
-    text-shadow:0 0 12px rgba(212,175,55,.35);
+    line-height:1.4;
 
-    animation:fadeIn 2s;
+    margin:20px auto;
 
 }
