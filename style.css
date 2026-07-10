@@ -226,3 +226,79 @@ border-radius:50px;
 cursor:pointer;
 
 }
+/* Final Page */
+
+.final{
+
+height:100vh;
+
+background:#090909;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.final-photo{
+
+width:85%;
+
+max-width:500px;
+
+border-radius:18px;
+
+box-shadow:0 0 35px rgba(212,175,55,.25);
+
+margin-bottom:40px;
+
+}
+
+.hidden{
+
+opacity:0;
+
+transition:opacity 2s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+}
+
+#message1 h1{
+
+font-family:'Cinzel',serif;
+
+color:#D4AF37;
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+#message1 p,
+#message2 p{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:28px;
+
+color:white;
+
+line-height:1.8;
+
+margin-top:15px;
+
+}
