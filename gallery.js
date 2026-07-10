@@ -33,23 +33,3 @@ window.location.href="wish.html";
 },500);
 
 };
-
-const music=document.getElementById("music");
-
-document.getElementById("musicBtn").onclick=function(){
-
-if(music.paused){
-
-music.play();
-
-this.innerHTML="⏸ Pause Music";
-
-}else{
-
-music.pause();
-
-this.innerHTML="🎵 Play Music";
-
-}
-
-};
