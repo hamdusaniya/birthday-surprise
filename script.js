@@ -1,13 +1,17 @@
 const button = document.getElementById("openBook");
 
-button.addEventListener("click", function(){
+if (button) {
 
-    document.body.style.opacity = "0";
+    button.addEventListener("click", function () {
 
-    setTimeout(function(){
+        document.body.style.opacity = "0";
 
-        window.location.href = "gallery.html";
+        setTimeout(function () {
 
-    },800);
+            window.location.href = "gallery.html";
 
-});
+        }, 800);
+
+    });
+
+}
