@@ -306,3 +306,30 @@ line-height:1.8;
 margin-top:15px;
 
 }
+#musicBtn{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+padding:12px 20px;
+
+background:#D4AF37;
+
+color:black;
+
+border:none;
+
+border-radius:30px;
+
+font-size:16px;
+
+cursor:pointer;
+
+z-index:999;
+
+box-shadow:0 0 15px rgba(212,175,55,.3);
+
+}
