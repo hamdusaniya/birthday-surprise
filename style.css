@@ -298,3 +298,366 @@ box-shadow:
 0 0 40px rgba(212,175,55,.6);
 
 }
+/* ==========================================
+   WISH PAGE
+========================================== */
+
+.wish{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px 20px;
+
+}
+
+.card{
+
+width:min(92%,700px);
+
+padding:40px 30px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:24px;
+
+text-align:center;
+
+box-shadow:
+
+0 0 45px rgba(212,175,55,.25),
+
+0 0 140px rgba(212,175,55,.10),
+
+0 15px 45px rgba(0,0,0,.55);
+
+animation:fadeCard 1.2s;
+
+}
+
+@keyframes fadeCard{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.card h1{
+
+font-family:'Cinzel',serif;
+
+font-size:46px;
+
+color:#d4af37;
+
+margin-bottom:30px;
+
+text-shadow:0 0 18px rgba(212,175,55,.35);
+
+}
+
+.card p{
+
+font-size:25px;
+
+line-height:1.9;
+
+margin-bottom:22px;
+
+}
+
+/* ==========================================
+   FINAL PAGE
+========================================== */
+
+.final{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:35px 20px;
+
+text-align:center;
+
+}
+
+.final-photo{
+
+width:min(92%,500px);
+
+border-radius:18px;
+
+box-shadow:
+
+0 0 55px rgba(212,175,55,.30),
+
+0 0 160px rgba(212,175,55,.12),
+
+0 18px 45px rgba(0,0,0,.6);
+
+margin-bottom:35px;
+
+transition:.5s;
+
+animation:fadeCard 1.4s;
+
+}
+
+.final-photo:hover{
+
+transform:scale(1.02);
+
+}
+
+.hidden{
+
+opacity:0;
+
+transition:opacity 2s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+}
+
+#message1 h1{
+
+font-family:'Cinzel',serif;
+
+font-size:42px;
+
+color:#d4af37;
+
+margin-bottom:15px;
+
+text-shadow:0 0 15px rgba(212,175,55,.35);
+
+}
+
+#message1 p,
+#message2 p{
+
+font-size:27px;
+
+line-height:1.8;
+
+max-width:800px;
+
+margin:auto;
+
+padding:10px 0;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.photo-text{
+
+font-size:20px;
+
+margin-bottom:22px;
+
+padding:0 12px;
+
+}
+
+.photo-frame{
+
+padding:10px;
+
+}
+
+.photo-frame img{
+
+max-width:100%;
+
+max-height:52vh;
+
+}
+
+.card{
+
+padding:28px 20px;
+
+}
+
+.card h1{
+
+font-size:34px;
+
+}
+
+.card p{
+
+font-size:21px;
+
+line-height:1.8;
+
+}
+
+.final{
+
+padding-top:30px;
+
+padding-bottom:30px;
+
+}
+
+.final-photo{
+
+width:94%;
+
+max-width:340px;
+
+margin-bottom:25px;
+
+}
+
+#message1 h1{
+
+font-size:30px;
+
+}
+
+#message1 p,
+#message2 p{
+
+font-size:20px;
+
+line-height:1.7;
+
+padding:0 10px;
+
+}
+
+button,
+.btn{
+
+width:230px;
+
+font-size:17px;
+
+padding:14px 20px;
+
+}
+
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media(min-width:769px){
+
+.gallery{
+
+gap:20px;
+
+}
+
+.photo-frame img{
+
+max-width:420px;
+
+max-height:65vh;
+
+}
+
+.card{
+
+padding:55px;
+
+}
+
+.final-photo{
+
+max-width:520px;
+
+}
+
+   }
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:-25%;
+
+left:-25%;
+
+width:150%;
+
+height:150%;
+
+background:
+
+radial-gradient(circle at center,
+
+rgba(212,175,55,.06),
+
+transparent 55%);
+
+animation:glow 10s ease-in-out infinite alternate;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+@keyframes glow{
+
+from{
+
+transform:scale(1);
+
+opacity:.5;
+
+}
+
+to{
+
+transform:scale(1.08);
+
+opacity:1;
+
+}
+
+}
