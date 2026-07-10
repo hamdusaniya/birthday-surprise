@@ -45,6 +45,7 @@ body{
 }
 
 h1{
+    text-shadow:0 0 15px rgba(212,175,55,.6);
     font-family:'Cinzel',serif;
     font-size:55px;
     color:#d4af37;
