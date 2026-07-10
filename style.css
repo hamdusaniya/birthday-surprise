@@ -1,38 +1,87 @@
-*{
+/* =======================================
+   GLOBAL
+======================================= */
 
-scroll-behavior:smooth;
-
-}
-body{
-
-    margin:0;
-
-    transition:opacity .8s ease;
-
-}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scrollbar-width:none;
+}
+
+::-webkit-scrollbar{
+    display:none;
 }
 
 body{
+    margin:0;
     font-family:'Cormorant Garamond',serif;
     overflow:hidden;
+    transition:opacity .8s ease;
+    background:#090909;
+    color:#fff;
 }
 
+/* =======================================
+   FLOATING DUST
+======================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+    radial-gradient(circle,#d4af37 1px,transparent 1px),
+    radial-gradient(circle,#ffffff .7px,transparent 1px);
+
+    background-size:140px 140px,200px 200px;
+
+    opacity:.18;
+
+    animation:dust 25s linear infinite;
+}
+
+@keyframes dust{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-140px);
+    }
+
+}
+
+/* =======================================
+   COVER PAGE
+======================================= */
+
 #cover{
+
     width:100vw;
     height:100vh;
 
-    background:url("cover.jpg") center center/cover no-repeat;
+    background:url("cover.jpg") center/cover no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
+
 }
 
 .overlay{
+
     width:100%;
     height:100%;
 
@@ -44,449 +93,362 @@ body{
     align-items:center;
 
     text-align:center;
-    color:white;
 
     padding:20px;
+
+    animation:fadeIn 2s;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 h1{
-    text-shadow:0 0 15px rgba(212,175,55,.6);
+
     font-family:'Cinzel',serif;
+
+    color:#D4AF37;
+
     font-size:55px;
-    color:#d4af37;
+
+    text-shadow:0 0 15px rgba(212,175,55,.6);
+
 }
 
 .subtitle{
+
     margin-top:15px;
+
     font-size:24px;
+
     font-style:italic;
+
 }
 
 .gift{
+
     margin-top:60px;
-    color:#d4af37;
+
+    color:#D4AF37;
+
     letter-spacing:3px;
+
 }
 
 h2{
+
     margin-top:10px;
+
     font-family:'Cinzel',serif;
+
     font-size:42px;
+
 }
+
+/* =======================================
+   BUTTONS
+======================================= */
 
 button{
 
-margin-top:35px;
+    margin-top:35px;
 
-padding:15px 45px;
+    padding:15px 45px;
 
-background:#D4AF37;
+    background:#D4AF37;
 
-border:none;
+    color:#000;
 
-border-radius:40px;
+    border:none;
 
-font-size:18px;
+    border-radius:40px;
 
-cursor:pointer;
+    font-size:18px;
 
-transition:.4s;
+    cursor:pointer;
 
-box-shadow:0 0 18px rgba(212,175,55,.35);
+    transition:.4s;
 
-}
-
-button:hover{
-
-transform:translateY(-3px);
-
-box-shadow:0 0 35px rgba(212,175,55,.7);
+    box-shadow:0 0 18px rgba(212,175,55,.35);
 
 }
 
 button:hover{
 
-    transform:scale(1.05);
+    transform:translateY(-3px) scale(1.05);
 
-}
-/* Birthday Wish Page */
-
-.wish{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:#090909;
-
-padding:30px;
+    box-shadow:0 0 35px rgba(212,175,55,.7);
 
 }
 
-.card{
+#openBook{
 
-max-width:900px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(212,175,55,.4);
-
-padding:60px;
-
-border-radius:20px;
-
-backdrop-filter:blur(12px);
-
-box-shadow:0 0 40px rgba(212,175,55,.15);
-
-text-align:center;
+    animation:pulse 2s infinite;
 
 }
 
-.card h1{
+@keyframes pulse{
 
-font-family:'Cinzel',serif;
-
-color:#D4AF37;
-
-font-size:46px;
-
-margin-bottom:35px;
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
 
 }
 
-.card p{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:28px;
-
-line-height:1.8;
-
-color:white;
-
-margin-bottom:25px;
-
-}
-
-.btn{
-
-display:inline-block;
-
-margin-top:25px;
-
-padding:15px 45px;
-
-background:#D4AF37;
-
-color:black;
-
-text-decoration:none;
-
-border-radius:50px;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-transform:scale(1.05);
-
-box-shadow:0 0 20px #D4AF37;
-
-}
-/* Gallery */
+/* =======================================
+   GALLERY
+======================================= */
 
 .gallery{
 
-height:100vh;
+    height:100vh;
 
-background:#090909;
+    display:flex;
 
-display:flex;
+    flex-direction:column;
 
-flex-direction:column;
+    justify-content:center;
 
-justify-content:center;
+    align-items:center;
 
-align-items:center;
+    background:#090909;
 
 }
 
 .gallery img{
 
-width:90%;
+    width:90%;
 
-max-width:700px;
+    max-width:700px;
 
-padding:12px;
+    padding:12px;
 
-background:white;
+    background:#fff;
 
-border-radius:12px;
-box-shadow:
+    border-radius:12px;
 
-0 10px 40px rgba(0,0,0,.5),
+    object-fit:cover;
 
-0 0 25px rgba(212,175,55,.25);
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.5),
+    0 0 25px rgba(212,175,55,.25);
 
-transition:opacity .8s ease,transform .5s ease;
+    transition:opacity .8s ease,transform .5s ease;
 
 }
 
 .gallery img:hover{
 
-transform:scale(1.02);
+    transform:scale(1.02);
 
 }
 
 #nextPhoto{
 
-margin-top:35px;
-
-padding:15px 40px;
-
-font-size:18px;
-
-background:#D4AF37;
-
-border:none;
-
-border-radius:50px;
-
-cursor:pointer;
+    margin-top:35px;
 
 }
-/* Final Page */
+
+/* =======================================
+   WISH PAGE
+======================================= */
+
+.wish{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.card{
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.4);
+
+    border-radius:20px;
+
+    backdrop-filter:blur(12px);
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(212,175,55,.15);
+
+}
+
+.card h1{
+
+    font-size:46px;
+
+    margin-bottom:35px;
+
+}
+
+.card p{
+
+    font-size:28px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:15px 45px;
+
+    background:#D4AF37;
+
+    color:#000;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 20px #D4AF37;
+
+}
+
+/* =======================================
+   FINAL PAGE
+======================================= */
 
 .final{
 
-height:100vh;
+    height:100vh;
 
-background:#090909;
+    display:flex;
 
-display:flex;
+    flex-direction:column;
 
-flex-direction:column;
+    justify-content:center;
 
-justify-content:center;
+    align-items:center;
 
-align-items:center;
+    text-align:center;
 
-padding:20px;
-
-text-align:center;
+    padding:20px;
 
 }
 
 .final-photo{
 
-.final-photo{
+    width:85%;
 
-width:85%;
+    max-width:500px;
 
-max-width:500px;
+    border-radius:20px;
 
-border-radius:20px;
+    margin-bottom:40px;
 
-box-shadow:
+    transition:.5s;
 
-0 0 40px rgba(212,175,55,.25),
-
-0 0 70px rgba(212,175,55,.12);
-
-margin-bottom:40px;
-
-transition:.5s;
+    box-shadow:
+    0 0 40px rgba(212,175,55,.25),
+    0 0 70px rgba(212,175,55,.12);
 
 }
 
 .final-photo:hover{
 
-transform:scale(1.02);
+    transform:scale(1.02);
 
 }
 
 .hidden{
 
-opacity:0;
+    opacity:0;
 
-transition:opacity 2s ease;
+    transition:opacity 2s ease;
 
 }
 
 .show{
 
-opacity:1;
+    opacity:1;
 
 }
 
 #message1 h1{
 
-font-family:'Cinzel',serif;
+    font-size:42px;
 
-color:#D4AF37;
-
-font-size:42px;
-
-margin-bottom:15px;
+    margin-bottom:15px;
 
 }
 
 #message1 p,
 #message2 p{
 
-font-family:'Cormorant Garamond',serif;
+    font-size:28px;
 
-font-size:28px;
+    line-height:1.8;
 
-color:white;
-
-line-height:1.8;
-
-margin-top:15px;
+    margin-top:15px;
 
 }
+
+/* =======================================
+   MUSIC BUTTON
+======================================= */
+
 #musicBtn{
 
-position:fixed;
+    position:fixed;
 
-top:20px;
+    top:20px;
 
-right:20px;
+    right:20px;
 
-padding:12px 20px;
+    z-index:999;
 
-background:#D4AF37;
+    padding:12px 20px;
 
-color:black;
+    background:#D4AF37;
 
-border:none;
+    color:#000;
 
-border-radius:30px;
+    border:none;
 
-font-size:16px;
+    border-radius:30px;
 
-cursor:pointer;
+    cursor:pointer;
 
-z-index:999;
-
-box-shadow:0 0 15px rgba(212,175,55,.3);
-
-}
-.overlay{
-
-animation:fadeIn 2s;
-
-}
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-    }
-/* Floating Dust */
-
-body::before{
-
-content:"";
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-pointer-events:none;
-
-background-image:
-
-radial-gradient(circle,#d4af37 1px,transparent 1px),
-
-radial-gradient(circle,#ffffff .7px,transparent 1px);
-
-background-size:140px 140px,200px 200px;
-
-opacity:.18;
-
-animation:dust 25s linear infinite;
-
-}
-
-@keyframes dust{
-
-from{
-
-transform:translateY(0);
-
-}
-
-to{
-
-transform:translateY(-140px);
-
-}
-
-}
-#openBook{
-
-animation:pulse 2s infinite;
-
-}
-
-@keyframes pulse{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.05);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}::-webkit-scrollbar{
-
-display:none;
-
-}
-
-html{
-
-scrollbar-width:none;
+    box-shadow:0 0 15px rgba(212,175,55,.3);
 
 }
