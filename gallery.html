@@ -6,28 +6,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Through the Years</title>
+<title>Our Memories</title>
 
 <link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<audio id="bgMusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
-</audio>
 
 <button id="musicBtn">🎵 Play Music</button>
-    
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <section class="gallery">
 
-    <h2 class="photo-text">
-        With every passing year, time only added to your beauty.
-    </h2>
+    <p class="photo-text">
+        With every passing year,<br>
+        time only added to your beauty.
+    </p>
 
-    <img id="photo" src="photo1.jpg" alt="Memory">
+    <div class="photo-frame">
+        <img id="photo" src="photo1.jpg">
+    </div>
 
-    <button id="nextPhoto">Turn the Page →</button>
+    <button id="nextPhoto">
+        Turn the Page →
+    </button>
 
 </section>
 
