@@ -1,57 +1,47 @@
-const photos = [
-    "photo1.jpg",
-    "photo2.jpg",
-    "photo3.jpg",
-    "photo4.jpg",
-    "photo5.jpg"
+const photos=[
+
+"photo1.jpg",
+
+"photo2.jpg",
+
+"photo3.jpg",
+
+"photo4.jpg",
+
+"photo5.jpg"
+
 ];
 
-let current = 0;
+let current=0;
 
-const image = document.getElementById("photo");
-const button = document.getElementById("nextPhoto");
+const image=document.getElementById("photo");
 
-button.addEventListener("click", function () {
+const button=document.getElementById("nextPhoto");
 
-    image.style.opacity = 0;
+button.addEventListener("click",function(){
 
-    setTimeout(function(){
+image.style.transform="rotateY(90deg)";
 
-        current++;
+image.style.opacity="0";
 
-        if(current < photos.length){
+setTimeout(function(){
 
-            image.src = photos[current];
+current++;
 
-            image.style.opacity = 1;
+if(current<photos.length){
 
-        }else{
+image.src=photos[current];
 
-            window.location.href="wish.html";
+image.style.transform="rotateY(0deg)";
 
-        }
-
-    },800);
-
-});
-const music=document.getElementById("bgMusic");
-
-const musicBtn=document.getElementById("musicBtn");
-
-musicBtn.addEventListener("click",function(){
-
-if(music.paused){
-
-music.play();
-
-musicBtn.innerHTML="⏸ Pause Music";
+image.style.opacity="1";
 
 }else{
 
-music.pause();
-
-musicBtn.innerHTML="🎵 Play Music";
+window.location.href="wish.html";
 
 }
+
+},700);
 
 });
