@@ -500,3 +500,50 @@ margin-top:35px;
     margin:20px auto;
 
 }
+@media (max-width:768px){
+
+    h1{
+        font-size:34px;
+    }
+
+    .photo-text{
+        font-size:22px;
+        padding:0 20px;
+    }
+
+    .card{
+        width:95%;
+        padding:25px 20px;
+    }
+
+    .card h1{
+        font-size:32px;
+    }
+
+    .card p{
+        font-size:20px;
+        line-height:1.8;
+    }
+
+    .final-photo{
+        width:90%;
+        max-width:320px;
+    }
+
+    #message1 h1{
+        font-size:28px;
+    }
+
+    #message1 p,
+    #message2 p{
+        font-size:20px;
+        padding:0 20px;
+    }
+
+    button,
+    .btn{
+        width:220px;
+        font-size:17px;
+    }
+
+}
