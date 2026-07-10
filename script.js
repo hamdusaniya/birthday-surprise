@@ -1,7 +1,7 @@
 const button = document.getElementById("openBook");
 
-button.addEventListener("click",function(){
-
-    alert("The story begins ❤️");
-
-});
+if (button) {
+    button.addEventListener("click", function () {
+        window.location.href = "gallery.html";
+    });
+}
