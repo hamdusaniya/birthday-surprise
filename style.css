@@ -462,3 +462,22 @@ button:hover{
     cursor:pointer;
 
 }
+.photo-text{
+
+    color:#D4AF37;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+
+    font-style:italic;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    text-shadow:0 0 12px rgba(212,175,55,.35);
+
+    animation:fadeIn 2s;
+
+}
