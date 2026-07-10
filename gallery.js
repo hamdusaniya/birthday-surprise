@@ -1,47 +1,38 @@
-const photos=[
-
-"photo1.jpg",
-
-"photo2.jpg",
-
-"photo3.jpg",
-
-"photo4.jpg",
-
-"photo5.jpg"
-
+const photos = [
+    "photo1.jpg",
+    "photo2.jpg",
+    "photo3.jpg",
+    "photo4.jpg",
+    "photo5.jpg"
 ];
 
-let current=0;
+let current = 0;
 
-const image=document.getElementById("photo");
+const image = document.getElementById("photo");
+const button = document.getElementById("nextPhoto");
 
-const button=document.getElementById("nextPhoto");
+button.addEventListener("click", function () {
 
-button.addEventListener("click",function(){
+    image.style.opacity = "0";
+    image.style.transform = "rotateY(90deg)";
 
-image.style.transform="rotateY(90deg)";
+    setTimeout(function () {
 
-image.style.opacity="0";
+        current++;
 
-setTimeout(function(){
+        if (current < photos.length) {
 
-current++;
+            image.src = photos[current];
 
-if(current<photos.length){
+            image.style.transform = "rotateY(0deg)";
+            image.style.opacity = "1";
 
-image.src=photos[current];
+        } else {
 
-image.style.transform="rotateY(0deg)";
+            window.location.href = "wish.html";
 
-image.style.opacity="1";
+        }
 
-}else{
-
-window.location.href="wish.html";
-
-}
-
-},1000);
+    }, 1000);
 
 });
