@@ -207,17 +207,29 @@ align-items:center;
 
 .gallery img{
 
-width:85%;
+width:82%;
 
 max-width:700px;
 
-border-radius:15px;
+padding:12px;
 
-box-shadow:0 0 35px rgba(212,175,55,.3);
+background:white;
 
-transition:opacity .8s ease;
+border-radius:8px;
 
-opacity:1;
+box-shadow:
+
+0 10px 40px rgba(0,0,0,.5),
+
+0 0 25px rgba(212,175,55,.25);
+
+transition:opacity .8s ease,transform .5s ease;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.02);
 
 }
 
