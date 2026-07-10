@@ -1,0 +1,300 @@
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:#090909;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+body{
+
+background:
+radial-gradient(circle at center,
+rgba(212,175,55,.08) 0%,
+rgba(20,20,20,1) 45%,
+#090909 100%);
+
+}
+
+/* Floating Dust */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(circle,#d4af37 1px,transparent 1px),
+
+radial-gradient(circle,#ffffff .6px,transparent 1px);
+
+background-size:160px 160px,220px 220px;
+
+opacity:.16;
+
+animation:dust 28s linear infinite;
+
+z-index:-1;
+
+}
+
+@keyframes dust{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-160px);
+
+}
+
+}
+
+/* ==========================================
+   COVER
+========================================== */
+
+#cover{
+
+width:100vw;
+
+height:100vh;
+
+background:url("cover.jpg") center center;
+
+background-repeat:no-repeat;
+
+background-size:contain;
+
+background-color:#090909;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+animation:fadeCover 1.2s ease;
+
+}
+
+@keyframes fadeCover{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+padding:25px;
+
+}
+
+.photo-text{
+
+width:90%;
+
+max-width:700px;
+
+text-align:center;
+
+font-size:26px;
+
+font-style:italic;
+
+color:#d4af37;
+
+line-height:1.5;
+
+margin-bottom:30px;
+
+text-shadow:
+
+0 0 15px rgba(212,175,55,.25);
+
+animation:fadeText 1.5s;
+
+}
+
+@keyframes fadeText{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.photo-frame{
+
+padding:14px;
+
+background:white;
+
+border-radius:16px;
+
+box-shadow:
+
+0 0 45px rgba(212,175,55,.25),
+
+0 0 110px rgba(212,175,55,.10),
+
+0 15px 45px rgba(0,0,0,.55);
+
+transition:.5s;
+
+}
+
+.photo-frame:hover{
+
+transform:translateY(-5px);
+
+}
+
+.photo-frame img{
+
+display:block;
+
+width:100%;
+
+max-width:360px;
+
+max-height:62vh;
+
+object-fit:contain;
+
+border-radius:8px;
+
+transition:opacity .7s;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button,
+.btn{
+
+margin-top:35px;
+
+padding:15px 40px;
+
+background:#d4af37;
+
+color:#111;
+
+font-size:18px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:40px;
+
+cursor:pointer;
+
+text-decoration:none;
+
+box-shadow:
+
+0 0 25px rgba(212,175,55,.35);
+
+transition:.35s;
+
+}
+
+button:hover,
+.btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.6);
+
+}
