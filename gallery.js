@@ -42,6 +42,6 @@ window.location.href="wish.html";
 
 }
 
-},700);
+},1000);
 
 });
