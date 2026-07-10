@@ -70,23 +70,33 @@ h2{
 }
 
 button{
-    margin-top:70px;
 
-    padding:16px 45px;
+margin-top:35px;
 
-    border:none;
+padding:15px 45px;
 
-    border-radius:50px;
+background:#D4AF37;
 
-    background:#d4af37;
+border:none;
 
-    color:black;
+border-radius:40px;
 
-    font-size:18px;
+font-size:18px;
 
-    cursor:pointer;
+cursor:pointer;
 
-    transition:.4s;
+transition:.4s;
+
+box-shadow:0 0 18px rgba(212,175,55,.35);
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 35px rgba(212,175,55,.7);
+
 }
 
 button:hover{
