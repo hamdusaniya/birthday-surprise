@@ -1,11 +1,13 @@
-document.getElementById("cover").onclick=function(){
+const cover = document.getElementById("cover");
 
-document.body.style.opacity="0";
+cover.addEventListener("click", () => {
 
-setTimeout(function(){
+document.body.style.opacity = "0";
 
-window.location.href="gallery.html";
+setTimeout(() => {
+
+window.location.href = "gallery.html";
 
 },700);
 
-};
+});
