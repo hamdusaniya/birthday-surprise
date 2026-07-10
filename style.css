@@ -341,3 +341,28 @@ z-index:999;
 box-shadow:0 0 15px rgba(212,175,55,.3);
 
 }
+.overlay{
+
+animation:fadeIn 2s;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+    }
