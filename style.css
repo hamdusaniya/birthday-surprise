@@ -318,29 +318,25 @@ padding:30px 20px;
 
 .card{
 
-width:min(92%,700px);
+width:92%;
 
-padding:40px 30px;
+max-width:650px;
+
+padding:24px 20px;
 
 background:rgba(255,255,255,.05);
 
-backdrop-filter:blur(12px);
-
 border:1px solid rgba(212,175,55,.25);
 
-border-radius:24px;
+border-radius:22px;
 
-text-align:center;
+backdrop-filter:blur(12px);
 
 box-shadow:
+0 0 40px rgba(212,175,55,.25),
+0 0 120px rgba(212,175,55,.08);
 
-0 0 45px rgba(212,175,55,.25),
-
-0 0 140px rgba(212,175,55,.10),
-
-0 15px 45px rgba(0,0,0,.55);
-
-animation:fadeCard 1.2s;
+text-align:center;
 
 }
 
@@ -366,25 +362,21 @@ transform:translateY(0);
 
 .card h1{
 
-font-family:'Cinzel',serif;
+font-size:30px;
 
-font-size:46px;
+margin-bottom:18px;
 
-color:#d4af37;
-
-margin-bottom:30px;
-
-text-shadow:0 0 18px rgba(212,175,55,.35);
+line-height:1.2;
 
 }
 
 .card p{
 
-font-size:25px;
+font-size:18px;
 
-line-height:1.9;
+line-height:1.55;
 
-margin-bottom:22px;
+margin-bottom:14px;
 
 }
 
@@ -454,30 +446,22 @@ opacity:1;
 
 #message1 h1{
 
-font-family:'Cinzel',serif;
+font-size:34px;
 
-font-size:42px;
-
-color:#d4af37;
-
-margin-bottom:15px;
-
-text-shadow:0 0 15px rgba(212,175,55,.35);
+margin-bottom:12px;
 
 }
 
 #message1 p,
 #message2 p{
 
-font-size:27px;
+font-size:20px;
 
-line-height:1.8;
+line-height:1.5;
 
-max-width:800px;
+max-width:90%;
 
 margin:auto;
-
-padding:10px 0;
 
 }
 
@@ -541,11 +525,19 @@ padding-bottom:30px;
 
 .final-photo{
 
-width:94%;
+width:82%;
 
-max-width:340px;
+max-width:280px;
 
-margin-bottom:25px;
+border-radius:18px;
+
+margin-bottom:18px;
+
+box-shadow:
+
+0 0 45px rgba(212,175,55,.35),
+
+0 0 130px rgba(212,175,55,.15);
 
 }
 
@@ -569,14 +561,13 @@ padding:0 10px;
 button,
 .btn{
 
-width:230px;
+margin-top:12px;
 
-font-size:17px;
+padding:13px 30px;
 
-padding:14px 20px;
+font-size:16px;
 
 }
-
 }
 
 /* ==========================================
