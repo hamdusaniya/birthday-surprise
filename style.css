@@ -86,9 +86,9 @@ button:hover{
     transform:scale(1.05);
 
 }
-/* Birthday Wish */
+/* Birthday Wish Page */
 
-.wish-page{
+.wish{
 
 height:100vh;
 
@@ -98,15 +98,15 @@ justify-content:center;
 
 align-items:center;
 
-background:#0b0b0b;
+background:#090909;
 
-padding:25px;
+padding:30px;
 
 }
 
-.wish-card{
+.card{
 
-max-width:800px;
+max-width:900px;
 
 background:rgba(255,255,255,.05);
 
@@ -116,47 +116,49 @@ padding:60px;
 
 border-radius:20px;
 
-backdrop-filter:blur(8px);
-
-text-align:center;
+backdrop-filter:blur(12px);
 
 box-shadow:0 0 40px rgba(212,175,55,.15);
 
+text-align:center;
+
 }
 
-.wish-card h1{
-
-color:#d4af37;
-
-margin-bottom:35px;
+.card h1{
 
 font-family:'Cinzel',serif;
 
+color:#D4AF37;
+
+font-size:46px;
+
+margin-bottom:35px;
+
 }
 
-.wish-card p{
-
-color:#f3f3f3;
-
-font-size:24px;
-
-line-height:1.9;
-
-margin-bottom:25px;
+.card p{
 
 font-family:'Cormorant Garamond',serif;
 
+font-size:28px;
+
+line-height:1.8;
+
+color:white;
+
+margin-bottom:25px;
+
 }
 
-.next-btn{
+.btn{
 
 display:inline-block;
 
-margin-top:20px;
+margin-top:25px;
 
-padding:15px 40px;
+padding:15px 45px;
 
-background:#d4af37;
+background:#D4AF37;
 
 color:black;
 
@@ -166,12 +168,14 @@ border-radius:50px;
 
 font-weight:bold;
 
-transition:.4s;
+transition:.3s;
 
 }
 
-.next-btn:hover{
+.btn:hover{
 
 transform:scale(1.05);
 
-    }
+box-shadow:0 0 20px #D4AF37;
+
+}
