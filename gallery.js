@@ -13,16 +13,24 @@ const button = document.getElementById("nextPhoto");
 
 button.addEventListener("click", function () {
 
-    current++;
+    image.style.opacity = 0;
 
-    if (current < photos.length) {
+    setTimeout(function(){
 
-        image.src = photos[current];
+        current++;
 
-    } else {
+        if(current < photos.length){
 
-        window.location.href = "wish.html";
+            image.src = photos[current];
 
-    }
+            image.style.opacity = 1;
+
+        }else{
+
+            window.location.href="wish.html";
+
+        }
+
+    },800);
 
 });
