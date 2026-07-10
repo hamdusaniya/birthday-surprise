@@ -1,15 +1,25 @@
-window.onload = function () {
+window.onload=function(){
 
-    setTimeout(function () {
+setTimeout(function(){
 
-        document.getElementById("message1").classList.add("show");
+document.getElementById("message1").classList.add("show");
 
-    }, 2000);
+},2000);
 
-    setTimeout(function () {
+setTimeout(function(){
 
-        document.getElementById("message2").classList.add("show");
+document.getElementById("message2").classList.add("show");
 
-    }, 5000);
+confetti({
+
+particleCount:140,
+
+spread:90,
+
+origin:{y:.65}
+
+});
+
+},5000);
 
 }
