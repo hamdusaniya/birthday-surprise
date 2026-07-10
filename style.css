@@ -69,25 +69,21 @@ body::before{
 
 #cover{
 
-    width:100vw;
-    height:100vh;
+width:100vw;
 
-    background:url("cover.jpg") center center;
+height:100vh;
 
-    background-repeat:no-repeat;
+background:url("cover.jpg") center center;
 
-    background-size:contain;
+background-repeat:no-repeat;
 
-    background-color:#090909;
+background-size:contain;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+background-color:#090909;
 
-    cursor:pointer;
+cursor:pointer;
 
 }
-
 .overlay{
 
     width:100%;
